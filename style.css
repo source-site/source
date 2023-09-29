@@ -48,20 +48,20 @@ body {
 
 .gallery {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap; /* تغيير من nowrap إلى wrap */
     justify-content: center;
-    flex-direction: row;
 }
 
 @media (max-width: 768px) {
     .gallery {
-        flex-direction: column;
+        flex-direction: column; /* تغيير من row إلى column */
+        align-items: center; /* إضافة خاصية align-items لتوسيط الصور */
     }
 }
 
 .image {
-    width: 300px;
-    height: 200px;
+    width: 50%; /* تغيير من 300px إلى 50% */
+    height: auto; /* تغيير من 200px إلى auto */
     margin: 10px;
     object-fit: cover;
     border-radius: 10px;

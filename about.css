@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav {
+    background-color: #f0f0f0;
+    padding: 10px;
+    /* استخدام الخاصية flexbox لترتيب العناصر في صفوف أو أعمدة بطريقة مرنة ومتساوية */
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: blue;
+}
+
+.main {
+    margin: 20px;
+    /* استخدام الخاصية grid لإنشاء تخطيط شبكي للقسم الرئيسي */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* تقسيم القسم الرئيسي إلى أعمدة تتكيف مع حجم الشاشة */
+    grid-gap: 20px; /* إضافة بعض المسافة بين الأعمدة */
+}
+
+.about-us {
+    grid-column: 1 / -1; /* امتداد قسم من نحن عبر جميع الأعمدة */
+}
+
+.about-us h2 {
+    text-align: center;
+}
+
+.about-us p {
+    text-align: justify;
+}
+
+.about-us img {
+    display: block;
+    margin: 0 auto;
+    /* استخدام الخاصية max-width لجعل عرض الصورة لا يزيد عن حجمها الأصلي */
+    max-width: 100%;
+    height: auto; /* جعل ارتفاع الصورة متناسب مع عرضها */
+}
+
+.mission {
+    
+    grid-column: 1 / span 1; /* وضع قسم المهمة في عمود واحد */
+}
+
+.mission h3 {
+    text-align: center;
+}
+
+.mission p {
+    text-align: justify;
+}
+
+.vision {
+    
+    grid-column: 2 / span 1; /* وضع قسم الرؤية في عمود واحد */
+}
+
+.vision h3 {
+    text-align: center;
+}
+
+.vision p {
+    text-align: justify;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+ /* استخدام الخاصية media queries لتحديد أنماط مختلفة لأحجام شاشات مختلفة */
+
+ /* عندما يكون عرض الشاشة أقل من أو يساوي 600 بكسل */
+ 
+ @media (max-width: 600px) {
+   /* تغيير خلفية الرأس إلى اللون الأخضر */
+   .header {
+       background-color: green; 
+   }
+   
+   /* تغيير توجيه العناصر في شريط التنقل إلى عمودي */
+   .nav {
+       flex-direction: column; 
+   }
+   
+   /* تغيير خلفية التذييل إلى اللون البرتقالي */
+   .footer {
+       background-color: orange; 
+   }
+ }
