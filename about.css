@@ -1,6 +1,9 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    /* استخدام الخاصية background-size لجعل صورة الخلفية تغطي كامل الشاشة */
+    background-image: url("logo.png");
+    background-size: cover;
 }
 
 .header {
@@ -47,7 +50,7 @@ body {
     text-align: justify;
 }
 
-.about-us img {
+.about-us video {
     display: block;
     margin: 0 auto;
     /* استخدام الخاصية max-width لجعل عرض الصورة لا يزيد عن حجمها الأصلي */
@@ -55,13 +58,26 @@ body {
     height: auto; /* جعل ارتفاع الصورة متناسب مع عرضها */
 }
 
-.mission {
+.target {
     
-    grid-column: 1 / span 1; /* وضع قسم المهمة في عمود واحد */
+    grid-column: 1 / -1; /* وضع قسم المهمة في عمود واحد */
 }
 
-.mission h3 {
-    text-align: center;
+.target h2 {
+    text-align: right;
+}
+
+.target p {
+    text-align: justify;
+}
+
+.mission {
+    
+    grid-column: 1 / -1; /* وضع قسم المهمة في عمود واحد */
+}
+
+.mission h2 {
+    text-align: right;
 }
 
 .mission p {
@@ -70,11 +86,11 @@ body {
 
 .vision {
     
-    grid-column: 2 / span 1; /* وضع قسم الرؤية في عمود واحد */
+    grid-column: 1 / -1; /* وضع قسم الرؤية في عمود واحد */
 }
 
-.vision h3 {
-    text-align: center;
+.vision h2 {
+    text-align: right;
 }
 
 .vision p {
@@ -106,5 +122,10 @@ body {
    /* تغيير خلفية التذييل إلى اللون البرتقالي */
    .footer {
        background-color: orange; 
+   }
+   
+   /* تغيير حجم الخط في القسم الرئيسي إلى أصغر */
+   .main {
+       font-size: 0.8em;
    }
  }
