@@ -50,6 +50,8 @@ body {
 .about-us iframe {
     display: block;
     margin: center;
+    max-width: 100%;
+    height: auto;
 }
 
 .target {
